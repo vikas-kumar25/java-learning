@@ -28,7 +28,7 @@ public class ShallowCopyConstructor {
 
         ShallowCopyConstructor s1 = new ShallowCopyConstructor(101, 21, "Anshuman", "Male");
 
-        // shallow copy
+        // shallow copy : two reference variables point to same object
         ShallowCopyConstructor s2 = s1;
 
         System.out.println(s1 == s2);
