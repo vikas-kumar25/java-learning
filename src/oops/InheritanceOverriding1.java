@@ -27,7 +27,7 @@ class Employee extends Person {
         this.empId = empId;
     }
 
-    void print(){
+    @Override void print(){
         System.out.println("name: " + name + " Age: " + age + " EmpId: "+ empId);
     }
 
@@ -41,7 +41,7 @@ class Doctor extends Person {
         this.degree = degree;
     }
 
-    void print(){
+    @Override void print(){
         System.out.println("name: " + name + " Age: " + age  + " Degree: "+ degree);
     }
 }
@@ -58,5 +58,38 @@ public class InheritanceOverriding1 {
         for (Person p : people) {
             p.print();
         }
+
+        //-------- WITHOUT Array + WITHOUT Upcasting ---------------
+//        Doctor d1 = new Doctor("C", 40, "MbbS");
+//        Employee e1 = new Employee("A", 21, 100);
+//
+//        Employee e2 = new Employee("B", 25, 101);
+//        Doctor d2 = new Doctor("D", 45, "MD");
+//
+//        e1.print();
+//        d1.print();
+//
+//        e2.print();
+//        d2.print();
+
+        //------- WITH Array + WITHOUT Upcasting ----------
+//        Employee[] employees = {
+//                new Employee("A", 21, 100),
+//                new Employee("B", 25, 101)
+//        };
+//
+//        Doctor[] doctors = {
+//                new Doctor("C", 40, "MbbS"),
+//                new Doctor("D", 45, "MD")
+//        };
+//
+//        for(Employee e : employees) {
+//            e.print();
+//        }
+//
+//        for(Doctor d : doctors) {
+//            d.print();
+//        }
+
     }
 }
